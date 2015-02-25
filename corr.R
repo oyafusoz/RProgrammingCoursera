@@ -13,5 +13,6 @@ corr <- function(directory, threshold = 0) {
     }
   
   else(cor_vector = 0)
+  
   return(cor_vector)
 }

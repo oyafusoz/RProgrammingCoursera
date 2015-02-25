@@ -8,6 +8,5 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
     append_df = rbind(append_df, file)
     i = i + 1
   }
-  
  mean(append_df[, match(pollutant, names(append_df))], na.rm = T)
 }
