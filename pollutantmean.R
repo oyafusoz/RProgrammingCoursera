@@ -1,12 +1,15 @@
 pollutantmean <- function(directory, pollutant, id = 1:332) {  
-  file_numbers = as.numeric(substr(list.files(directory),1,3)) 
-  i = 1
-  append_df = data.frame(Date=vector(), sulfate=vector(), nitrate=vector(), ID=vector())
+  append_df = data.frame()
   
-  while(i <= length(id)){
-    file = read.csv(list.files(directory)[match(id[i], file_numbers)], header = T)
+  for(i in id){
+    file = read.csv(list.files(directory)[i])
     append_df = rbind(append_df, file)
-    i = i + 1
   }
- mean(append_df[, match(pollutant, names(append_df))], na.rm = T)
+  
+  return(mean(append_df[, paste(pollutant)], na.rm = T))
 }
+
+#Instructions can be found on the coursera website, Assigment 1: Air Pollution. 
+#Line 2: create a new empty dataframe where we will append the dataframes
+#Lines 4-7: loop through each id number, read it in, then rbind it to append_df
+#Line 9: return the mean given the pollutant chosen.
