@@ -2,7 +2,7 @@
 #setwd (cd in git bash)
 #list.files (ls in git bash)
 
-setwd('C://Users//Mervin//Google Drive//RProgrammingCoursera//RProgrammingCoursera')
+setwd('C://Users//Mervin//Google Drive//RProgrammingCoursera (1)')
 
 ###############
 # Indexing

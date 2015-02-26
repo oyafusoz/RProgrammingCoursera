@@ -1,4 +1,4 @@
-source('C://Users//Mervin//Google Drive//RProgrammingCoursera//RProgrammingCoursera//complete.R')
+source('C://Users//Mervin//Google Drive//RProgrammingCoursera//complete.R')
 corr <- function(directory, threshold = 0) {
   cor_vector = vector()
   
