@@ -10,7 +10,7 @@ corr <- function(directory, threshold = 0) {
       }
       else(cor_vector = cor_vector)
     }
-  else(cor_vector = 0)
+  else(cor_vector = cor_vector)
   return(cor_vector)
 }
 
